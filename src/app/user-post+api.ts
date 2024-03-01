@@ -11,6 +11,9 @@ export async function POST(req: ExpoRequest): Promise<ExpoResponse> {
     }
 
     return new ExpoResponse('ihhh não deu', {
-        status: 404
+        status: 404,
+        headers: {
+            "Content-type":"text/plain"
+        }
     })
 }
